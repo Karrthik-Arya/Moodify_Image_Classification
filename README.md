@@ -23,14 +23,15 @@
 Finally the model gave a val_accuracy of about 63 % and a test accuracy of about 64.22 % which was pretty good according to us since most of the models we found on the net did not have much better accuracy than this.  
                                                                
 - This link was also useful https://github.com/AmrElsersy/Emotions-Recognition
+- You can find our baseline model [here](https://github.com/Karrthik-Arya/Moodify_Image_Classification/blob/main/Moodify_Image_Classification.ipynb).
 
 ## The Resnet50 model
-- We found that many people had tried to use transfer learning for emotion recognition. We also thought of looking into that.We looked into the models covered in Facial Expression Recognition with Deep Learning paper.
+- We found that many people had tried to use transfer learning for emotion recognition. We also thought of looking into that.We looked into the models covered in this [Facial Expression Recognition with Deep Learning](http://cs230.stanford.edu/projects_winter_2020/reports/32610274.pdf) paper.
  
 - We then thought of going with the Resnet50 model. ResNet50 is a variant of the ResNet model which has 48 Convolution layers along with 1 MaxPool and 1 Average Pool layer. We tried using the pretrained model which was trained on the Imagenet dataset to classify objects. We used the CNN part of this pretrained model as a starting point. We added 3 FC layers after these CNN ones with units 1024, 256 and 7(the output layer).
 
 - We observed  that unfreezing conv4 layers of block3 was important, without them the model does not converge. Other things that we tried were unfreezing all batch norm layers and then adding dropout between the FC layers. That seems to slightly improve the situation by preventing overfitting. Another thing that we tried was to use the SGD optimizer instead of Adam. This also gave slightly better results. With SGD the learning is much slower and thus we increased the learning rate to 0.01. Using SGD the model generalizes much better than using Adam or any other adaptive optimizers.  Now this model can get val/test accuracy about 60% after 60-70 epochs.(However still less than the baseline model)
 
-- We are still working on this model to see if we can modify it to give better results. 
+- We are still working on this model to see if we can modify it to give better results. You can find our resnet50 model [here](https://github.com/Karrthik-Arya/Moodify_Image_Classification/blob/main/resnet50.ipynb). 
 
 
