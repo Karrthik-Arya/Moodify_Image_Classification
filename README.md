@@ -22,11 +22,10 @@
 - We have also used model checkpoints as a callback to get the best possible weights from the training.
 Finally the model gave a val_accuracy of about 63 % and a test accuracy of about 64.22 % which was pretty good according to us since most of the models we found on the net did not have much better accuracy than this.  
                                                                
-- This link was also useful https://github.com/AmrElsersy/Emotions-Recognition
 - You can find our baseline model [here](https://github.com/Karrthik-Arya/Moodify_Image_Classification/blob/main/Moodify_Image_Classification.ipynb).
 
 ## The Resnet50 model
-- We found that many people had tried to use transfer learning for emotion recognition. We also thought of looking into that.We looked into the models covered in this [Facial Expression Recognition with Deep Learning](http://cs230.stanford.edu/projects_winter_2020/reports/32610274.pdf) paper.
+- We found that many people had tried to use transfer learning for emotion recognition and we also thought of looking into that.
  
 - We then thought of going with the Resnet50 model. ResNet50 is a variant of the ResNet model which has 48 Convolution layers along with 1 MaxPool and 1 Average Pool layer. We tried using the pretrained model which was trained on the Imagenet dataset to classify objects. We used the CNN part of this pretrained model as a starting point. We added 3 FC layers after these CNN ones with units 1024, 256 and 7(the output layer).
 
@@ -34,4 +33,9 @@ Finally the model gave a val_accuracy of about 63 % and a test accuracy of about
 
 - We are still working on this model to see if we can modify it to give better results. You can find our resnet50 model [here](https://github.com/Karrthik-Arya/Moodify_Image_Classification/blob/main/resnet50.ipynb). 
 
-
+Resources we used:
+- https://towardsdatascience.com/different-ways-of-improving-training-accuracy-c526db15a5b2
+- [Facial Expression Recognition with Deep Learning](http://cs230.stanford.edu/projects_winter_2020/reports/32610274.pdf)
+- https://github.com/AmrElsersy/Emotions-Recognition
+- https://towardsdatascience.com/a-bunch-of-tips-and-tricks-for-training-deep-neural-networks-3ca24c31ddc8
+- https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/code (looked into codes of some people here)
