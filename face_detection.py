@@ -3,7 +3,7 @@ import argparse
 import test
 import numpy as np
 from mtcnn.mtcnn import MTCNN
-
+import cv2
 
 vid = cv2.VideoCapture(0)
 detector = MTCNN()

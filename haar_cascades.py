@@ -23,7 +23,7 @@ while(True):
     frame = cv2.resize(frame, (250, 250))
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     faces  = detector.detectMultiScale(gray, scaleFactor=1.05,
-		minNeighbors=5, minSize=(30, 30),
+		minNeighbors=5, minSize=(70, 70),
 		flags=cv2.CASCADE_SCALE_IMAGE)
     # Display the resulting frame
     if faces != []:
