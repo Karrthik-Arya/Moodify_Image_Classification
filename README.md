@@ -2,7 +2,7 @@
 ## The Dataset
 - We have used the fer2013 dataset and tensorflow for training the model
 
-- This dataset contains images tagged with 7 emotions which we are going to work on grouping to 4. 
+- This dataset contains images tagged with 7 emotions which we manually converted to 4. 
 
 ## The Baseline model 
 - We tried using CNN to train the model.
@@ -31,7 +31,7 @@ Finally the model gave a val_accuracy of about 63 % and a test accuracy of about
 
 - We observed  that unfreezing conv4 layers of block3 was important, without them the model does not converge. Other things that we tried were unfreezing all batch norm layers and then adding dropout between the FC layers. That seems to slightly improve the situation by preventing overfitting. Another thing that we tried was to use the SGD optimizer instead of Adam. This also gave slightly better results. With SGD the learning is much slower and thus we increased the learning rate to 0.01. Using SGD the model generalizes much better than using Adam or any other adaptive optimizers.  Now this model can get val/test accuracy about 60% after 60-70 epochs.(However still less than the baseline model)
 
-- We are still working on this model to see if we can modify it to give better results. You can find our resnet50 model [here](https://github.com/Karrthik-Arya/Moodify_Image_Classification/blob/main/resnet50.ipynb). 
+- Howvever in the end we concluded that the baseline model gave better results. You can find our resnet50 model [here](https://github.com/Karrthik-Arya/Moodify_Image_Classification/blob/main/resnet50.ipynb). 
 
 Resources we used:
 - https://towardsdatascience.com/different-ways-of-improving-training-accuracy-c526db15a5b2
